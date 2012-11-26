@@ -1,6 +1,7 @@
 # DMS
 A Ruby on Rails prototype of Document Management System.
 
+
 ## Gems
 
 [CarrierWave](http://github.com/jnicklas/carrierwave),
@@ -12,11 +13,13 @@ A Ruby on Rails prototype of Document Management System.
 [rspec-rails](https://github.com/rspec/rspec-rails),
 [factory_girl](https://github.com/thoughtbot/factory_girl_rails)
 
+
 ## Running the app
 
     bundle install
     bundle exec rake db:setup
     rails s
+
 
 ## Running Test
 

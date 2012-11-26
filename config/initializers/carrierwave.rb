@@ -8,8 +8,8 @@ CarrierWave.configure do |config|
     config.enable_processing = true
     config.fog_credentials = {
         :provider => 'AWS',
-        :aws_access_key_id => 'AKIAJQ5CKNWKQBR7DPBQ',
-        :aws_secret_access_key => 'sjQg8yq4nssf8cgn89NGdV8G/VBBbLKX4+Qq+UP8',
+        :aws_access_key_id => 'your aws access key',
+        :aws_secret_access_key => 'aws secret key',
         :region => 'us-east-1'
     }
 

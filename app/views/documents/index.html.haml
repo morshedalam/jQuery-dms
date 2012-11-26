@@ -1,0 +1,18 @@
+%h4 Documents
+
+#fileupload.file-gallery
+  %table.table.table-striped
+    %tbody.files{"data-toggle" => "modal-gallery",  "data-target" => "#modal-gallery"}
+      = render "shared/fileupload/queue"
+      - if @documents.empty?
+        %tr
+          %td.empty
+            There is no document.
+            = link_to 'Click here', new_document_path
+            to upload new file.
+      - else
+        = render "shared/fileupload/index"
+
+- content_for :javascript do
+  :javascript
+    initializeUploaderWithFiles(true);

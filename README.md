@@ -11,6 +11,7 @@ A Ruby on Rails prototype of Document Management System.
 [Simple Form](https://github.com/plataformatec/simple_form) etc.
 
 ## Running the app
-  bundle install
-  bundle exec rake db:setup
-  rails s
+
+    bundle install
+    bundle exec rake db:setup
+    rails s

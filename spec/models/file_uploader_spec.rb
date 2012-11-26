@@ -7,7 +7,7 @@ describe FileUploader do
     @document = Factory.build(:document)
   end
 
-  describe "Document" do
+  describe "Uploader" do
     it "must have cache directory" do
       @document.file.cache_dir.should_not be_empty
     end
@@ -20,8 +20,8 @@ describe FileUploader do
       @document.name.should eql(@document.file.to_readable_name)
     end
 
-    it "should be xml file only" do
-      @document.file.extension_white_list.should eql(["xml"])
+    it "should have xml in the white list" do
+      assert @document.file.extension_white_list.include?("xml")
     end
   end
 end

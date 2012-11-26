@@ -17,26 +17,16 @@ class DocumentsControllerTest < ActionController::TestCase
   end
 
   test "should create document" do
+    document = {
+        :name => 'Ruby on Rails',
+        :path => fixture_file_upload('files/ruby_on_rails_book.xml', 'text/xml')
+    }
+
     assert_difference('Document.count') do
-      post :create, document: {  }
+      post :create, :document => document
     end
 
-    assert_redirected_to document_path(assigns(:document))
-  end
-
-  test "should show document" do
-    get :show, id: @document
-    assert_response :success
-  end
-
-  test "should get edit" do
-    get :edit, id: @document
-    assert_response :success
-  end
-
-  test "should update document" do
-    put :update, id: @document, document: {  }
-    assert_redirected_to document_path(assigns(:document))
+    assert_redirected_to documents_path()
   end
 
   test "should destroy document" do

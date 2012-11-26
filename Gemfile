@@ -21,25 +21,23 @@ gem 'simple_form'
 gem 'jquery-fileupload-rails'
 gem 'fog'
 
-# Gems for development and test
-group :development, :test do
-  gem 'annotate'
-  gem 'rb-readline'
+group :development do
   gem 'brakeman'
   gem 'rename'
+  gem 'rb-readline'
+  gem 'annotate'
+end
+
+# Gems for development and test
+group :development, :test do
+  gem 'spork'
+  gem 'database_cleaner'
+  gem 'factory_girl_rails', '1.0.1'
+  gem 'rspec-rails'
 end
 
 group :test do
-  gem 'rspec', '2.5.0'
-  gem 'rspec-rails', '2.5.0'
-  gem 'database_cleaner'
   gem 'webrat'
-  gem 'factory_girl_rails', '1.0.1'
-  gem 'spork', '0.9.0.rc3'
-end
-
-group :cucumber do
-  gem 'cucumber'
-  gem 'cucumber-rails'
+  gem 'cucumber-rails', :require => false
   gem 'pickle', '~> 0.4.4'
 end

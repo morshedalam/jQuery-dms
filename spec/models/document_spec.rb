@@ -26,7 +26,7 @@ describe Document do
   describe "Name" do
     it "should be similar with readable file name" do
       @document.save
-      @document.xml_file.to_readable_name
+      @document.file.to_readable_name
       @document.name.should eql(@document.file.to_readable_name)
     end
   end
@@ -60,19 +60,12 @@ describe Document do
   describe "File" do
     it "should not exists" do
       doc = Document.new({:name => 'missing', :file => 'missing.xml'})
-      doc.content_to_html.first.should eql('File does not exists!')
+      assert(doc.file.file.nil?)
     end
 
     it "should exists" do
       @document.save
-      assert(@document.file.file.exists?, 'false')
-      @document.content_to_html.first.should_not eql('File does not exists!')
-    end
-
-    it "content should not be empty" do
-      @document.save
-      content = @document.content_to_html
-      content.should_not == ""
+      assert(@document.file.file.exists?)
     end
   end
 end

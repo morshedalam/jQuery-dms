@@ -44,7 +44,6 @@ describe DocumentsController do
       documents = save_documents
       doc_id_to_delete = documents.first.id
       delete :destroy, :id => doc_id_to_delete
-      response.should be_success
       Document.find_by_id(doc_id_to_delete).should be_nil
     end
   end
@@ -56,5 +55,4 @@ describe DocumentsController do
     end
     documents
   end
-
 end

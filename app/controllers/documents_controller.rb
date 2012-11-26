@@ -18,14 +18,8 @@ class DocumentsController < ApplicationController
     @document.file = params[:document][:path]
     if @document.save
       respond_to do |format|
-        format.html {
-          render :json => [@document.to_jq_upload(true)].to_json,
-                 :content_type => 'text/html',
-                 :layout => false
-        }
-        format.json {
-          render :json => [@document.to_jq_upload(true)].to_json
-        }
+        format.html { redirect_to documents_path, :notice => 'Document uploaded successfully' }
+        format.json { render :json => [@document.to_jq_upload(true)].to_json }
       end
     else
       render :json => [{:error => "custom_failure"}], :status => 304
@@ -35,6 +29,10 @@ class DocumentsController < ApplicationController
   def destroy
     @document = Document.find(params[:id])
     @document.destroy
-    render :json => true
+
+    respond_to do |format|
+      format.html { redirect_to documents_path }
+      format.json { render :json => true }
+    end
   end
 end

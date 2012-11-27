@@ -1,6 +1,7 @@
-%h4 Documents
-
 #fileupload.file-gallery
+  %h4{:class => 'pull-left'} Documents
+  = render "documents/search"
+
   %table.table.table-striped
     %tbody.files{"data-toggle" => "modal-gallery",  "data-target" => "#modal-gallery"}
       = render "shared/fileupload/queue"

@@ -11,10 +11,17 @@ describe DocumentsController do
       response.code.should eq("200")
     end
 
-    it "assigns all documents" do
+    it "should return all documents" do
       documents = save_documents
       get :index
       assigns[:documents].sort.should == documents.sort
+    end
+
+    it "should return search result by name" do
+      documents = save_documents
+      documents.first.update_attribute(:name, 'Test')
+      get :index, {:name => 'Test'}
+      assigns[:documents].should have(1).items
     end
   end
 

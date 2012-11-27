@@ -18,6 +18,19 @@ var fileUploadErrors = {
     emptyResult:'Empty file upload result'
 };
 
+jQuery.fn.reset = function () {
+    $(this).each(function () {
+        this.reset();
+    });
+}
+
+$(document).ready(function () {
+    $('.reset-search').live("click", function (e) {
+        $(this).closest('form').find('#name').val('');
+        $(this).closest('form').submit();
+    });
+});
+
 function initializeUploaderWithFiles(show_download, file_types) {
     var accept_exp = new RegExp("(\.|\/)(" + file_types + ")$", "i");
 

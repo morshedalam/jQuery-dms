@@ -3,6 +3,7 @@
       <div class="input-append">
         <%= search_field_tag :name, params[:name], :placeholder => 'search', :class => "span2 auto_search_complete" %>
         <%= button_tag "Search", :name => nil, :class => 'btn', :id => "btn_search" %>
+        <input type="reset" class="reset-search btn" value="Reset" />
       </div>
   <% end %>
 </div>

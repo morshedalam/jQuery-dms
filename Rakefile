@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Dms::Application.load_tasks
+JqueryDms::Application.load_tasks

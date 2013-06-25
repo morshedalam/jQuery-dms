@@ -16,7 +16,7 @@ CarrierWave.configure do |config|
     config.fog_public = false
     config.fog_directory = 'file_cabinet'
     #config.fog_host = 'https://s3.amazonaws.com'
-    #config.asset_host = 'http://Dms.s3.amazonaws.com'
+    #config.asset_host = 'http://JqueryDms.s3.amazonaws.com'
     config.fog_attributes = {'Cache-Control' => 'max-age=315576000'}
     config.fog_authenticated_url_expiration = 600
   else

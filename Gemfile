@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.6'
+gem 'rails', '3.2.13'
 gem 'sqlite3'
 
 # Gems used only for assets and not required
@@ -12,13 +12,12 @@ group :assets do
   gem 'therubyracer'
 end
 
-gem 'less-rails'
-gem 'twitter-bootstrap-rails'
 gem 'jquery-rails'
+gem 'bootstrap-sass', '>= 2.3.0.0'
 gem 'carrierwave', :git => 'git@github.com:morshedalam/carrierwave.git'
 gem 'haml-rails'
 gem 'simple_form'
-gem 'jquery-fileupload-rails'
+gem 'jquery-fileupload-rails', '0.4.0'
 gem 'fog'
 
 group :development do

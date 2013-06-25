@@ -16,6 +16,7 @@ class DocumentsController < ApplicationController
   def create
     @document = Document.new
     @document.file = params[:document][:path]
+
     if @document.save
       respond_to do |format|
         format.html { redirect_to documents_path, :notice => 'Document uploaded successfully' }

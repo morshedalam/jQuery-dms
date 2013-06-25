@@ -6,7 +6,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require twitter/bootstrap
+//= require bootstrap
 //= require jquery-fileupload
 
 var fileUploadErrors = {
@@ -25,7 +25,7 @@ jQuery.fn.reset = function () {
 }
 
 $(document).ready(function () {
-    $('.reset-search').live("click", function (e) {
+    $('.reset-search').on("click", function (e) {
         $(this).closest('form').find('#name').val('');
         $(this).closest('form').submit();
     });
@@ -53,11 +53,14 @@ function initializeUploaderWithFiles(show_download, file_types) {
     $.getJSON($('#fileupload').prop('action'), function (files) {
         var fu = $('#fileupload').data('fileupload'), template;
         fu._adjustMaxNumberOfFiles(-files.length);
+
         if (show_download == true)
             template = fu._renderDownload(files).appendTo($('#fileupload .files'));
+
         // Force reflow:
         fu._reflow = fu._transition && template.length && template[0].offsetWidth;
         template.addClass('in');
+
         $('#loading').remove();
     });
 }

@@ -1,0 +1,46 @@
+// Import all the variables into the main css file.
+//@import "variables";
+
+// I gather this file is a starting point for the project.
+@import "bootstrap";
+// Include responsive Bootstrap styles
+@import "bootstrap-responsive";
+
+body {
+  padding-top: 60px;
+}
+
+.row {
+  margin-left: 0px;
+}
+
+.table-striped td {
+  padding-right: 10px;
+}
+
+.filter-bar {
+  padding: 10px 5px 2px;
+}
+
+.file-gallery {
+  margin-left: 0px;
+  margin-top: 10px;
+
+  .empty {
+
+  }
+
+  td.name {
+    min-width: 200px;
+  }
+
+  td.start, td.cancel, td.delete {
+    width: 60px;
+    white-space: nowrap;
+    text-align: right;
+  }
+
+  td.error {
+    min-width: 200px;
+  }
+}

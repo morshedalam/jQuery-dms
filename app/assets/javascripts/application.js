@@ -51,7 +51,8 @@ function initializeUploaderWithFiles(show_download, file_types) {
 
     // Load existing files:
     $.getJSON($('#fileupload').prop('action'), function (files) {
-        var fu = $('#fileupload').data('fileupload'), template;
+        var fu = $('#fileupload').data('blueimpFileupload'), template
+//        var fu = $('#fileupload').data('fileupload'), template;
         fu._adjustMaxNumberOfFiles(-files.length);
 
         if (show_download == true)

@@ -5,22 +5,21 @@ CarrierWave.configure do |config|
 
   if Rails.env.production?
     config.storage = :fog
-    config.enable_processing = true
+    config.enable_processing = false
     config.fog_credentials = {
         :provider => 'AWS',
-        :aws_access_key_id => 'AKIAJQ5CKNWKQBR7DPBQ',
-        :aws_secret_access_key => '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',
+        :aws_access_key_id => '',
+        :aws_secret_access_key => '',
         :region => 'us-east-1'
     }
 
     config.fog_public = false
-    config.fog_directory = 'xmlanalyzer'
+    config.fog_directory = ''
     config.fog_attributes = {'Cache-Control' => 'max-age=315576000'}
     config.fog_authenticated_url_expiration = 600
   else
-    #config.fog_host = 'https://s3.amazonaws.com'
     config.storage = :file
     config.enable_processing = false
-    config.asset_host = 'http://localhost:3002'
+    config.asset_host = 'http://localhost:3000'
   end
 end

@@ -19,7 +19,7 @@ gem 'carrierwave'
 gem 'haml-rails'
 gem 'simple_form'
 gem 'jquery-fileupload-rails', '0.4.0'
-gem 'fog'
+gem 'fog', '~> 1.3.1'
 
 # Gems for production
 group :production do

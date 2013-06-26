@@ -1,6 +1,7 @@
 class Document < ActiveRecord::Base
-  include Rails.application.routes.url_helpers
   mount_uploader :file, FileUploader
+
+  include Rails.application.routes.url_helpers
 
   validates :file, :presence => true
 
@@ -16,7 +17,7 @@ class Document < ActiveRecord::Base
     {
         "id" => self.id,
         "name" => self.name.humanize,
-        "size" => file.size,
+        #"size" => file.size.to_i,
         "url" => file.url,
         "full_path" => file.current_path,
         "delete_url" => document_path(:id => id),

@@ -15,7 +15,7 @@ end
 
 gem 'jquery-rails'
 gem 'bootstrap-sass', '>= 2.3.0.0'
-gem 'carrierwave', :git => 'git@github.com:morshedalam/carrierwave.git'
+gem 'carrierwave'
 gem 'haml-rails'
 gem 'simple_form'
 gem 'jquery-fileupload-rails', '0.4.0'

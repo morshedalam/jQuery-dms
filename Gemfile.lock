@@ -1,11 +1,3 @@
-GIT
-  remote: git@github.com:morshedalam/carrierwave.git
-  revision: b9053c06c376307bf272fea1b6a1589a273a097c
-  specs:
-    carrierwave (0.6.2)
-      activemodel (>= 3.2.0)
-      activesupport (>= 3.2.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -59,6 +51,9 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    carrierwave (0.7.1)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -228,7 +223,7 @@ DEPENDENCIES
   annotate
   bootstrap-sass (>= 2.3.0.0)
   brakeman
-  carrierwave!
+  carrierwave
   coffee-rails (~> 3.2.1)
   cucumber-rails
   database_cleaner
